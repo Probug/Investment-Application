@@ -1,0 +1,93 @@
+@model Bitmoonfasttrade.Models.Wallet
+
+    @{
+        ViewData["Title"] = "Edit User Wallet";
+        Layout = "~/Views/Shared/_LayoutProfile.cshtml";
+    }
+
+
+<div class="container">
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <div class="col-xl-2"></div>
+
+        <div class="col-xl-8">
+            <div class="card">
+                <form asp-controller="Wallet" asp-action="Edit" method="POST">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <h3 class="mb-0">Edit User Wallet </h3> <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-md-12">
+                                      @* <div class="form-group">
+                                          <label class="form-control-label" asp-for="Email">Email</label>
+                                        <input asp-for="Email" class="form-control" type="text" id="input-first-name" value=Email disabled>
+                                    </div> *@
+                                    <div class="form-group mb-3">
+                                        <input asp-for="Id" class="form-control" type="hidden" >
+                                        <input asp-for="UserID" class="form-control" type="hidden">
+                                        <input asp-for="Email" class="form-control" type="hidden">
+                                         <label class="form-control-label" asp-for="BTCBalance">BTC Balance</label>
+                                        <input asp-for="BTCBalance" class="form-control" type="text" id="input-first-name">
+                                         <span asp-validation-for="BTCBalance" class="text-danger"></span> 
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" asp-for="EthBalance">Eth Balance</label>
+                                        <input asp-for="EthBalance" class="form-control" type="text" id="input-first-name">
+                                         <span asp-validation-for="EthBalance" class="text-danger"></span> 
+                                        
+                                    </div>
+                                      <div class="form-group">
+                                        <label class="form-control-label" asp-for="LiteCoinBalance">LTC Balance</label>
+                                        <input asp-for="LiteCoinBalance" class="form-control" type="text" id="input-first-name">
+                                         <span asp-validation-for="LiteCoinBalance" class="text-danger"></span> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" asp-for="DogeCoinBalance">DogeCoin Balance</label>
+                                        <input asp-for="DogeCoinBalance" class="form-control" type="text" id="input-first-name">
+                                         <span asp-validation-for="DogeCoinBalance" class="text-danger"></span> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" asp-for="Balance">Balance</label>
+                                        <input asp-for="Balance" class="form-control" type="text" id="input-first-name">
+                                         <span asp-validation-for="Balance" class="text-danger"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="submit" value="Save" class="btn btn-md btn-primary" />
+                                    <a asp-action="Index" class="btn btn-link">Back to List</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-xl-2"></div>
+
+    </div>
+</div>
+@section Scripts {
+    @if (TempData["msg"] != null)
+    {
+        string msg = (string)TempData["msg"];
+        <script>   
+          alert("Operation Successful");
+            
+        </script>
+    }
+    <partial name="_ValidationScriptsPartial" />
+}

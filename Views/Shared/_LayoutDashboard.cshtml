@@ -1,0 +1,122 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+<meta name="description" content="Award winning forex and commodities broker, providing trading services and facilities for both Retail and Institutions"> 
+<link rel="icon" href="~/img/logos/Bitmoon_Icon-1.png" type="image/png">
+<title>@ViewData["Title"] - Bitmoonfasttrade</title>
+<!-- Fonts -->
+<!-- Argon CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<!-- Icons -->
+<link href="~/vendor/nucleo/css/nucleo.css" rel="stylesheet" asp-append-version="true">
+<link href="~/vendor/fontawesome/fontawesome-free/css/all.min.css" rel="stylesheet" asp-append-version="true">
+<link type="text/css" href="~/css/argon.css?v=1.2.0" rel="stylesheet" asp-append-version="true">
+   @* <link rel="stylesheet" href="~/css/bootstrap.css"> *@
+
+    @RenderSection("Styles", required: false)
+    @RenderSection("HeadScripts", required: false)
+</head>
+<body style="overflow-x: hidden !important;">
+
+        <partial name="_Sidenav"/>
+        <div class="main-content" id="panel">
+        
+                <!-- Header -->
+                <div class="header bg-lighter pb-6" style="padding-top: 1rem;">
+                    <div class="container-fluid" style="margin-bottom: 3rem;">
+                        <partial name="Topnav/_TopnavProfile" />
+                        <div class="header-body">
+                                <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <script type="text/javascript"
+                                    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                                        {
+                                            "symbols": [
+                                                {
+                                                    "proName": "FOREXCOM:SPXUSD",
+                                                    "title": "S&P 500"
+                                                },
+                                                {
+                                                    "proName": "FOREXCOM:NSXUSD",
+                                                    "title": "Nasdaq 100"
+                                                },
+                                                {
+                                                    "proName": "FX_IDC:EURUSD",
+                                                    "title": "EUR/USD"
+                                                },
+                                                {
+                                                    "proName": "BITSTAMP:BTCUSD",
+                                                    "title": "BTC/USD"
+                                                },
+                                                {
+                                                    "proName": "BITSTAMP:ETHUSD",
+                                                    "title": "ETH/USD"
+                                                }
+                                            ],
+                                                "showSymbolLogo": true,
+                                                    "colorTheme": "dark",
+                                                        "isTransparent": false,
+                                                            "displayMode": "adaptive",
+                                                                "locale": "en"
+                                        }
+                                    </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                            <div id="coinmarketcap-widget-marquee" coins="1,1027,825,2" currency="USD" theme="dark" transparent="false" show-symbol-logo="true"></div>
+                            
+                            <!-- 1st Row: Crumbs and filters -->
+                            @* <div class="row align-items-center py-4">
+                                <div class="col-lg-6 col-5 text-right"> *@
+                                    @* <a href="#" class="btn btn-sm btn-neutral">New</a>
+                                    <a href="#" class="btn btn-sm btn-neutral">Filters</a> *@
+                                @* </div>
+                            </div> *@
+                        </div>
+                    </div>
+                </div>
+
+
+            @* <partial name="Topnav/_TopnavProfile" /> *@
+                <!-- Header -->
+        
+            <!-- Page content -->
+            <div class="container-fluid mt--6">
+                <!-- Page content -->
+                @RenderBody()
+                <partial name="_Footer"/>
+            </div>
+        </div>
+
+<!-- Argon Scripts -->
+<!-- Core -->
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+<script src="~/vendor/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+<script src="~/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+<script src="~/vendor/js-cookie/js.cookie.js" asp-append-version="true"></script>
+<script src="~/vendor/jquery.scrollbar/jquery.scrollbar.min.js" asp-append-version="true"></script>
+<script src="~/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js" asp-append-version="true"></script>
+<!-- Docs JS -->
+<script src="~/vendor/anchor-js/anchor.min.js" asp-append-version="true"></script>
+<script src="~/vendor/clipboard/dist/clipboard.min.js" asp-append-version="true"></script>
+<script src="~/vendor/holderjs/holder.min.js" asp-append-version="true"></script>
+<script src="~/vendor/prismjs/prism.js" asp-append-version="true"></script>
+<!-- Optional JS -->
+<script src="~/vendor/chart.js/dist/Chart.min.js" asp-append-version="true"></script>
+<script src="~/vendor/chart.js/dist/Chart.extension.js" asp-append-version="true"></script>
+<script src="~/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" asp-append-version="true"></script>
+<!-- Argon JS -->
+
+
+<script src="~/js/argon.min.js" asp-append-version="true"></script>
+
+@RenderSection("Scripts", required: false)
+</body>
+</html>

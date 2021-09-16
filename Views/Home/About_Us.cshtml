@@ -1,0 +1,182 @@
+@{
+    ViewData["Title"] = "About Us";
+} 
+<style>
+    .body-container {
+        /*remove the container default padding attribute*/
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        /*increase width as per your need*/
+        max-width: 100%;
+    }
+    .breadcrumb_area{
+        background: url(../img/brand/bread-bg2.jpg);
+        position: relative;
+        z-index: 1;
+        padding: 200px 0px 75px;
+    }
+    .expertise_item i {
+    color: #08ae8d; !important
+    }
+    .currency_converter_area .converter_right .converter_info .HS1mainContainer tbody tr td:nth-child(2) .HS1selectBox {
+    width: auto !important;
+    }
+</style>
+   
+        <!--================Hero Breadcrumb Area =================-->
+        <section class="breadcrumb_area" style="background: url(../img/brand/comming_soon_bg.jpg) no-repeat scroll center 0/cover; padding:200px 0px 75px";>
+            <div class="container">
+                <div class="banner_content">
+                    <h2 class="br_title">About Us</h2>
+                    <ul class="bread_cumb list_style">
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li> > About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--================Hero banner Area =================-->
+        
+        <!--================ Welcome Area =================-->
+        <section class="welcome_area">
+            <div class="container">
+                <div class="welcome_content">
+                    <div class="section_title text-center">
+                        <h2>What is Bit Moon Fast Trade ... Know more About Us</h2>
+                        <p class="title_p">Procrastinate installed base benefits dramatically</p>
+                        <span class="bottom_line"></span>
+                    </div>
+                    <h4 class="mb_0">Bit Moon Fast Trade’s innovative trading platforms and tools provide the power and reliability you need to feel more confident in your trading. </h4>
+                    <p class="p_text">Bit Moon Fast Trade is a CIMA regulated Forex broker, providing traders with access to the global Forex market through top tier FX liquidity providers.</p>
+                    
+                    <p class="mb_0 p_text">With Bit Moon Fast Trade, you will experience super-fast trade execution, as well as interbank grade, RAW ECN spreads. When combined, these elements offer clients a true institutional trading experience, across a wide range of trading instruments.</p>
+                    <p class="mb_0">Clients can access our wide range of markets through the powerful <strong>MetaTrader 4 & MetaTrader 5</strong> platforms, as well as WebTrader and multiple mobile trading apps for iPhone and Android devices.</p>
+                            <p class="mb_0">GAIN YOUR TRADING ADVANTAGE WITH Bit Moon Fast Trade.</p>
+
+                    <a class="btn theme_btn" style="background: #fe4f22;" asp-area="Identity" asp-page="/Account/Login">Get Started</a> 
+                    <a class="btn read_btn" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                         
+                  
+                    @* <a class="read_btn" asp-area="Identity" asp-page="/Account/Login">Get Started</a>
+                    <a class="btn read_btn" asp-controller="Home" asp-action="Contact">Contact Us</a> *@
+                </div>
+            </div>
+        </section>
+        <!--================ Welcome Area =================-->
+        
+<!--================ Services Area =================-->
+        <section class="service_area">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="section_title text-center mb_60">
+                        <h2 class="mb_0">Core Features</h2>
+                        <span class="bottom_line"></span>
+                    </div>
+                </div>
+                <div class="row mt_30">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="expertise_item service_item text-center">
+                            <i class="flaticon-money"></i>
+                            <a href="#"><h3 class="title_color">SAFE AND SECURE</h3></a>
+                            <p>Trade with 100% peace of mind as we have the best system security team onboard.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="expertise_item service_item text-center">
+                            <i class="flaticon-money-1"></i>
+                            <a href="#"><h3 class="title_color">INSTANT TRADING</h3></a>
+                            <p>With our lightning speed servers, you are sure to get the best out of your investments.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="expertise_item service_item text-center">
+                            <i class="flaticon-money-4"></i>
+                            <a href="#"><h3 class="title_color">PROGRESSIVE REVENUE</h3></a>
+                            <p>Watch your accruals grow in real time and monitor how much revenue is being generated from your investment.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="expertise_item service_item text-center">
+                            <i class="flaticon-money-3"></i>
+                            <a href="#"><h3 class="title_color">INVESTMENT FOR ALL</h3></a>
+                            <p>With different packages, Our system is modelled to accommodate everyone no matter how much you have to invest.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="expertise_item service_item text-center">
+                            <i class="flaticon-money-8"></i>
+                            <a href="#"><h3 class="title_color">COVERED BY INSURANCE</h3></a>
+                            <p>You have zero chances of losing your investments as all our assets are duly covered by inssurance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="expertise_item service_item text-center">
+                            <i class="flaticon-money-2"></i>
+                            <a href="#"><h3 class="title_color">BITCOIN TRANSACTION</h3></a>
+                            <p>Invest in the world's most popular cryptocurrency and enjoy all the benefits that come with it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ Services Area =================-->
+        
+        <section class="currency_converter_area" style="background-color: #1D1D1D;">          
+                <div class="converter_left" style="background: black; overflow: hidden;">
+                    <img src="~/img/brand/coins-paper-money.jpg" style="height: 100%; width: 100%; object-fit: cover; opacity: 0.6;" alt="">
+                </div>
+            <div class="converter_right">
+                <div class="converter_info">
+                    <div class="section_title mb_60">
+                        <h2 class="mb_0">Bitcoin Currency Convertor</h2>
+                        <p class="mb_0 title_p">You can quickly calculate
+                            your investments</p>
+                        <span class="bottom_line w_50"></span>
+                    </div>
+                    <div class="coin_calculator">
+                        <script type="text/javascript"
+                            src="https://fx-rate.net/converter.php?layout=horizontal&amp;amount=1&amp;tcolor=000000&amp;currency=BTC&amp;default_pair=BTC/USD"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--================ How work Area =================-->
+        <section class="how_work_area bg_color">
+            <div class="container">
+                <div class="section_title text-center mb_60">
+                    <h2 class="mb_0">How it works</h2>
+                    <span class="bottom_line"></span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="work_step work_first text-center">
+                            <div class="work_icon">
+                                <i class="flaticon-money-4"></i>
+                            </div>
+                            <h2 class="mb_0">Open Free Account</h2>
+                            <p class="mb_0">Starting off with our platform is pretty simple. The first step to get started is to simply create a free account on the platform</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="work_step work_middle text-center">
+                            <div class="work_icon">
+                                <i class="flaticon-money-6"></i>
+                            </div>
+                            <h2 class="mb_0">Activate Your Account</h2>
+                            <p class="mb_0">To reduce flooding and abuse, all new members are required to verify their email before their account can be enabled for usage</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="work_step text-center">
+                            <div class="work_icon">
+                                <i class="flaticon-money-5"></i>
+                            </div>
+                            <h2 class="mb_0">Grow Your Fund & Enjoy</h2>
+                            <p class="mb_0">Once you have created account and ctivated your email. You are ready to get started on the journey to financial freedom</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ How work Area =================-->

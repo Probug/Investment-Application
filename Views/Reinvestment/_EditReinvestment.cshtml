@@ -1,0 +1,93 @@
+@model Bitmoonfasttrade.Models.Transactions
+
+    @{
+        ViewData["Title"] = "Edit Reinvestments";
+        Layout = "~/Views/Shared/_LayoutProfile.cshtml";
+    }
+
+
+<div class="container">
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <div class="col-xl-2"></div>
+
+        <div class="col-xl-8">
+            <div class="card">
+                <form asp-controller="Reinvestment" asp-action="Edit" method="POST">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <h3 class="mb-0">Edit Reinvestments </h3> <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-md-12">
+                                      <div class="form-group">
+                                          <label class="form-control-label" asp-for="Email">Email</label>
+                                        <input asp-for="Email" class="form-control" type="text" id="input-first-name" disabled>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input asp-for="Id" class="form-control" type="hidden" >
+                                        <input asp-for="UserId" class="form-control" type="hidden">
+                                        <input asp-for="Type" class="form-control" type="hidden" value="Reinvestment">
+                                        <input asp-for="DateCreated" class="form-control" type="hidden">   
+                                        <input asp-for="WalletAddress" class="form-control" type="hidden">
+                                        <label class="form-control-label" asp-for="Status">Status</label>
+                                                <select asp-for="Status" class="form-control" id="exampleFormControlSelect1">
+                                               <option>Select</option>
+                                                <option>Pending</option>
+                                                <option>Completed</option>
+                                                </select>
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="form-control-label" asp-for="DateCompleted">Coin</label>
+                                                <select asp-for="Coin" class="form-control" id="exampleFormControlSelect2">
+                                                <option>Select</option>
+                                                <option>Bitcoin</option>
+                                                <option>Ethereum</option>
+                                                <option>Litecoin</option>
+                                                <option>Doge</option>
+                                                </select>
+                                        
+                                    </div>
+                                      <div class="form-group">
+                                        <label class="form-control-label" asp-for="DateCompleted">Date Completed</label>
+                                         <input placeholder="Selected date" asp-for="DateCompleted" type="text" class="form-control datepicker">
+                                            <span asp-validation-for="DateCompleted" class="text-danger"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="submit" value="Save" class="btn btn-md btn-primary" />
+                                    <a asp-action="Completed" class="btn btn-link">Back to List</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-xl-2"></div>
+
+    </div>
+</div>
+@section Scripts {
+    @if (TempData["msg"] != null)
+    {
+        string msg = (string)TempData["msg"];
+        <script>   
+          alert("Operation Successful");
+            
+        </script>
+    }
+    <partial name="_ValidationScriptsPartial" />
+}

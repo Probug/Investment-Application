@@ -1,0 +1,138 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!-- Sidenav -->
+
+<nav id="sidebar" style="min-width: 250px; max-width:250px; transition: all 0.3s">
+    <div class="sidebar-header">
+        <h3>Bootstrap Slider</h3>
+    </div>
+     @if (SignInManager.IsSignedIn(User) && User.IsInRole("SuperAdmin"))
+                    {
+
+                        <!-- Navigation -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Deposit" asp-action="Pending">
+                                    <i class="ni ni-bell-55 text-orange"></i> Pending Deposits
+                                </a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Deposit" asp-action="Completed">
+                                    <i class="ni ni-check-bold text-default"></i> Completed Deposits
+                                </a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Withdrawal" asp-action="Pending">
+                                    <i class="ni ni-bell-55 text-pink"></i> Pending Withdrawal
+                                </a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Withdrawal" asp-action="Completed">
+                                    <i class="ni ni-satisfied text-default"></i> Completed Withdrawal
+                                </a>
+                            </li>  
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Reinvestment" asp-action="Pending">
+                                    <i class="ni ni-paper-diploma text-primary"></i> Pending Reinvestment
+                                </a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Reinvestment" asp-action="Completed">
+                                    <i class="ni ni-sound-wave text-default"></i> Completed Reinvestment
+                                </a>
+                            </li>  
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Wallet" asp-action="Index">
+                                    <i class="ni ni-briefcase-24 text-default"></i> Users Wallet
+                                </a>
+                            </li>          
+                        </ul>
+                    }
+                    else
+                    {
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Dashboard" asp-action="Index" title="Manage">
+                                    <i class="ni ni-tv-2 text-primary"></i> Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Deposit" asp-action="Create">
+                                    <i class="ni ni-app text-orange"></i> Create Investment
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Reinvestment" asp-action="Index">
+                                    <i class="ni ni-planet text-primary"></i> Reinvest Earnings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Withdrawal" asp-action="Index">
+                                    <i class="ni ni-money-coins text-yellow"></i> Request Withdrawal
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Deposit" asp-action="Transaction">
+                                    <i class="ni ni-bullet-list-67 text-default"></i> Transaction History
+                                </a>
+                            </li> 
+                        </ul>
+                    }
+
+                <!-- Divider -->
+                <hr class="my-3">
+
+                <!-- Heading -->
+                <h6 class="navbar-heading p-0 text-muted">
+                    <span class="docs-normal">User Account Settings</span>
+                </h6>
+
+                <!-- Navigation -->
+                <ul class="navbar-nav mb-md-3">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+                            <i class="ni ni-single-02 text-yellow"></i>
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Email" title="Manage">
+                            <i class="ni ni-email-83 text-default"></i>
+                            Email
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" title="Manage">
+                            <i class="ni ni-lock-circle-open text-primary"></i>
+                            Password
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Divider -->
+                <hr class="my-3">
+
+                <!-- Heading -->
+                <h6 class="navbar-heading p-0 text-muted">
+                    <span class="docs-normal">Other Links</span>
+                </h6>
+
+                <!-- Navigation -->
+                <ul class="navbar-nav mb-md-3">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Contact">
+                            <i class="ni ni-support-16 text-orange"></i> 
+                            <span>Contact Support</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new {area = ""})">
+                            <i class="ni ni-user-run text-dark"></i>
+                            <span class="nav-link-text">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+
+</nav>

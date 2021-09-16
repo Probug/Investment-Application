@@ -1,0 +1,26 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <ul class="nav navbar-nav justify-content-center" style="background: transparent; padding-top: 0px !important">
+            <li class="nav-item submenu dropdown" style="margin-left: 15px;">   
+                <a class="nav-link dropdown-toggle" asp-controller="Dashboard" asp-action="Index">@User.Identity.Name!</a>
+            </li>
+        </ul>
+    }
+    else
+    {
+        <ul class="nav navbar-nav justify-content-center" style="background: transparent; margin-left: 15px; padding-top: 0px !important">
+            <li class="nav-item submenu dropdown">
+                <a class="nav-link dropdown-toggle" asp-area="Identity" asp-page="/Account/Register">Register</a>
+            </li>
+            <li class="nav-item submenu dropdown">
+                <a class="nav-link dropdown-toggle" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                @* <a class="nav-link text-dim" asp-area="Identity" asp-page="/Account/Login">Login</a> *@
+            </li>
+        </ul>
+    }
+

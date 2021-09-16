@@ -1,0 +1,109 @@
+
+    @{
+        ViewData["Title"] = "Dashboard";
+        Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    }
+
+    <div class="row">
+                @* Available Balance *@
+        <div class="col-xl-3">
+            <div class="card card-profile" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); !important">
+                <div class="card-body pt-0" style="padding: 0px !important" >
+                    <div class="icon" style="display: inline-block; text-align: center; background-color: rgba(0, 0, 0, 0.12); width: 80px; height:60px; padding-top: 25px; padding-bottom: 70px;">
+                    <i class="material-icons" style="color: #fff;">money</i>
+                    </div>
+                    <div class="content" style="display: inline-block; padding: 7px 10px;">
+                            <div class="text" style="font-size:15px;color: #242424;"> <b>Account Balance</b></div>
+                            <div class="text" style="font-size:20px;color: #242424;"><b>$@ViewBag.balance</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* Currently Invested *@
+        <div class="col-xl-3">
+            <div class="card card-profile" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); !important">
+                <div class="card-body pt-0" style="padding: 0px !important">
+                    <div class="icon" style="display: inline-block; text-align: center; background-color: rgba(0, 0, 0, 0.12); width: 80px; height:60px; padding-top: 25px; padding-bottom: 70px;">
+                    <i class="material-icons" style="color: #fff;">money</i>
+                    </div>
+                    <div class="content" style="display: inline-block; padding: 7px 10px;">
+                            <div class="text" style="font-size:15px;color: #242424;"> <b>Amount Invested</b></div>
+                            <div class="text" style="font-size:20px;color: #242424;"><b>$@ViewBag.invested</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* Available Balance *@
+        <div class="col-xl-3">
+            <div class="card card-profile" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); !important">
+                <div class="card-body pt-0" style="padding: 0px !important" >
+                    <div class="icon" style="display: inline-block; text-align: center; background-color: rgba(0, 0, 0, 0.12); width: 80px; height:60px; padding-top: 25px; padding-bottom: 70px;">
+                    <i class="material-icons" style="color: #fff;">money</i>
+                    </div>
+                    <div class="content" style="display: inline-block; padding: 7px 10px;">
+                            <div class="text" style="font-size:15px;color: #242424;"> <b>Bonus</b></div>
+                            <div class="text" style="font-size:20px;color: #242424;"><b>$@ViewBag.bonus</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* Total Withdrawal *@
+        <div class="col-xl-3">
+            <div class="card card-profile" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); !important">
+               
+                <div class="card-body pt-0" style="padding: 0px !important">
+                    <div class="icon" style="display: inline-block; text-align: center; background-color: rgba(0, 0, 0, 0.12); width: 80px; height:60px; padding-top: 25px; padding-bottom: 70px;">
+                    <i class="material-icons" style="color: #fff;">money</i>
+                    </div>
+                    <div class="content" style="display: inline-block; padding: 7px 10px;">
+                            <div class="text" style="font-size:15px;color: #242424;"> <b>Total Withdrawal</b></div>
+                            <div class="text" style="font-size:20px;color: #242424;"><b>$@ViewBag.withdrawal</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                    <div class="card-body">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container" style="position: relative;box-sizing: content-box;width: auto;height: 700px;margin: 0 auto !important;padding: 0 !important;">
+                            <div id="tradingview_87e04" style="width: auto !important; height: 700px !important;"></div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                    <script type="text/javascript">
+                                    new TradingView.widget(
+                                    {
+                                    "autosize": true,
+                                    "symbol": "COINBASE:BTCUSD",
+                                    "timezone": "Etc/UTC",
+                                    "theme": "dark",
+                                    "style": "1",
+                                    "locale": "en",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "enable_publishing": false,
+                                    "withdateranges": true,
+                                    "range": "YTD",
+                                    "hide_side_toolbar": false,
+                                    "allow_symbol_change": true,
+                                    "details": true,
+                                    "hotlist": true,
+                                    "calendar": true,
+                                    "container_id": "tradingview_87e04"
+                                    }
+                                    );
+                                    </script>
+                                </div>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+            </div>
+        </div>
+    </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,81 @@
+@{
+    ViewData["Title"] = "Contacts";
+} 
+<style>
+    .body-container {
+        /*remove the container default padding attribute*/
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        /*increase width as per your need*/
+        max-width: 100%;
+    }
+</style> 
+        
+        <!--================Hero Breadcrumb Area =================-->
+        <section class="breadcrumb_area" style="background: url(../img/brand/comming_soon_bg.jpg) no-repeat scroll center 0/cover; padding:200px 0px 75px";>
+            <div class="container">
+                <div class="banner_content">
+                    <h2 class="br_title">Contact Us</h2>
+                    <ul class="bread_cumb list_style">
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li> > Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--================Hero banner Area =================-->
+        
+        <!--================Hero Contact Area =================-->
+        <section class="contact_area">
+            <div class="container">
+                <div class="section_title mb_50">
+                    <h2>Send us a message</h2>
+                    <p class="title_p">We will get back to you as soon as possible</p>
+                    <span class="bottom_line"></span>
+                </div>
+                <div class="row contact_us_inner">
+                    <div class="col-md-7">
+                        <form class="row contact_us_form" action="http://designarc.biz/demos/bixcoin/theme/bixcoin-multipage/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="name2" name="name2" placeholder="Last Name">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" id="organization" name="organization" placeholder="Organization">
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="submit" value="submit" class="btn submit_btn theme_btn" style="background: #fe4f22;">Submit Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 offset-md-1">
+                        <div class="contact_address">
+                            <div class="c_address_item">
+                                <h5>Address:</h5>
+                                <p>54B, Tailstoi Town 5238 <br>La city, IA 522364</p>
+                            </div>
+                            <div class="c_address_item">
+                                <h5>Phone:</h5>
+                                <a href="https://wa.me/44 7951 223409">+44 7951 223409</a>
+                            </div>
+                            <div class="c_address_item">
+                                <h5>email:</h5>
+                                <a href="cdn-cgi/l/email-protection.html#4821262e270821262e27082b2938213c29242b293a2c27262d2b3a31383c27662b2725"><span class="__cf_email__" data-cfemail="630a0d050c230002130a17020f000211070c0d0600111a13170c4d000c0e">info@bitmoonfasttrade.com</span></a>
+                                <a href="cdn-cgi/l/email-protection.html#5736333a3e3936333a3e39173436273e23363b3436253338393234252e2723387934383a"><span class="__cf_email__" data-cfemail="d7b6b3babeb997b4b6a7bea3b6bbb4b6a5b3b8b9b2b4a5aea7a3b8f9b4b8ba">admin@Bitmoonfasttrade.com</span></a>
+                                <a href="https://t.me/joinchat/AAAAAEtJSyy0o4asGKZn7g">BitMoon Fast Trade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Hero Contact Area =================-->

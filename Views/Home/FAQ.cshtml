@@ -1,0 +1,196 @@
+@{
+    ViewData["Title"] = "FAQ";
+} 
+<style>
+    .body-container {
+        /*remove the container default padding attribute*/
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        /*increase width as per your need*/
+        max-width: 100%;
+    }
+</style>      
+        <!--================Hero Breadcrumb Area =================-->
+        <section class="breadcrumb_area" style="background: url(../img/brand/comming_soon_bg.jpg) no-repeat scroll center 0/cover; padding:200px 0px 75px";>
+            <div class="container">
+                <div class="banner_content">
+                    <h2 class="br_title">Faq</h2>
+                    <ul class="bread_cumb list_style">
+                       <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li> > Faq</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--================Hero banner Area =================-->
+        
+        <!--================ Faq Area =================-->
+        <section class="faq_area">
+            <div class="container">
+                <div class="section_title_three">
+                    <h2 class="mb_0 f_32">Frequently Asked Questions</h2>
+                    <p class="mb_0">Discover you question from underneath or present your inquiry fromt the submit box.</p>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div id="accordion" role="tablist" aria-multiselectable="true" class="panel-group faq-accordion">
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn-accordion" aria-expanded="true" role="button" aria-controls="collapse1">
+                                            <span class="pluse">+</span><span class="minus">-</span>What is this website about? Is this an ICO?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="collapse show" aria-expanded="true" role="tabpanel">
+                                    <div class="card-block panel-body">No. This is not an Initial Coin Offering. We believe that ICO's should be approached with caution as the majority of "Alt coins" do not offer any benefits to more established crypto currencies such as Bitcoin, Ethereum, etc. Cardone Capital is a managed cryptocurrency trading platform with user friendly interface and attractive offer.</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="btn-accordion collapsed" aria-expanded="false" aria-controls="collapse2">
+                                            <span class="pluse">+</span><span class="minus">-</span> What Markets do you trade?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+                                    <div class="panel-body">We trade on Bitcoin and other cryptocurrencies.</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="btn-accordion collapsed" aria-expanded="false">
+                                            <span class="pluse">+</span><span class="minus">-</span>What is the risk for my investment?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+                                    <div class="panel-body">There is no risk whatsoever. Just invest and enjoy the financial freedom.</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="btn-accordion collapsed" aria-expanded="false">
+                                            <span class="pluse">+</span><span class="minus">-</span>How can I access the account?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+                                    <div class="panel-body"> If you are a registered user of capitalcardonecrypto.com, please enter your username and password in the appropriate fields at the top of the website and click the "Login to Account" button. You will be redirected to your account automatically as soon as you have done the above.</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="accordion2" role="tablist" aria-multiselectable="true" class="panel-group faq-accordion">
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5" class="btn-accordion collapsed" aria-expanded="false" role="button" aria-controls="collapse5">
+                                            <span class="pluse">+</span><span class="minus">-</span>Are there any limits for an investment amount? How can I keep my account safe?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="collapse" aria-expanded="true" role="tabpanel">
+                                    <div class="card-block panel-body">We take all security measures to protect your account and keep it safe from third parties intrusion.</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse6" class="btn-accordion collapsed" aria-expanded="false" aria-controls="collapse6">
+                                            <span class="pluse">+</span><span class="minus">-</span>What is the process of investing?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+                                    <div class="panel-body">To make investments you should register with capitalcardonecrypto.com, create an account and then you can make your deposit. All the investments are made in your personal account after login</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse7" class="btn-accordion collapsed" aria-expanded="false">
+                                            <span class="pluse">+</span><span class="minus">-</span>I forgot my password. What should I do?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse7" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+                                    <div class="panel-body">Go to Password Reminder section, enter your registration e-mail address and follow the instructions.</div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse8" class="btn-accordion collapsed" aria-expanded="false">
+                                            <span class="pluse">+</span><span class="minus">-</span>How to create a new account?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse8" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
+                                    <div class="panel-body">It's not difficult at all. Click on the following button, fill in the registration form and create a new account.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--================ Faq Area =================-->
+        <!--================ Question Area =================-->
+        <section class="question_area">
+            <img class="faq_bg_right" src="~/img/brand/faq_bg.png" alt="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="section_title_three">
+                            <h2 class="mb_0 f_32">Didn’t find your answer? Submit your question</h2>
+                        </div>
+                        <form action="#" class="question_form" method="POST">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address*">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="text" name="subject" placeholder="Subject*">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Your Question"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" value="submit" class="btn submit_btn read_btn" style="background: #fe4f22;">Submit now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ Question Area =================-->
+        
+        <!--================ About Area =================-->
+        <section class="about_currency_area about_currency_area_two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 display_flex">
+                        <div class="about_content flex">
+                            <h5  class="about_title c_blue mb_0">What is Bit Moon Fast Trade</h5>
+                            <h4 class="mb_0">Bit Moon Fast Trade’s innovative trading platforms and tools provide the power and reliability you need to feel more confident in your trading. </h4>
+                            <p class="mb_0">Bit Moon Fast Trade was founded in 2009 by a highly-specialised team with backgrounds in Finance, FOREX and Technology. Created to help clients pursue their financial goals, we proudly offer transparent access to the FOREX market, powerful trading platforms (MT4 and MT5), exceptional execution speed, and award-winning customer service.</p>
+                            <a class="btn theme_btn theme_btn_two" style="background: #fe4f22;" asp-controller="Home" asp-action="About_Us">Know more about us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about_img">
+                            <img class="img-fluid" src="~/img/brand/about_laptop.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ About Area =================-->
+       

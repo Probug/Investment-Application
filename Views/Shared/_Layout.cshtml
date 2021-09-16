@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Award winning forex and commodities broker, providing trading services and facilities for both Retail and Institutions"> 
+    <link rel="icon" href="~/img/logos/Bitmoon_Icon-1.png" type="image/png">
+    <title>@ViewData["Title"] - Bitmoonfasttrade</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/landing-page.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/vendors/flaticon/flaticon.css">
+    <link rel="stylesheet" href="~/vendors/stroke-icon/style.css">
+    <link rel="stylesheet" href="~/vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/vendors/jqery-nice-selector/css/nice-select.css">
+    <link rel="stylesheet" href="~/vendors/magnify-popup/magnific-popup.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="~/css/style18b5.css?f=1621726526">
+    <link rel="stylesheet" href="~/css/responsive18b5.css?f=1621726526">
+    <link rel="stylesheet" href="~/css/style62a4.css?f=1621726526">
+    <link rel="stylesheet" href="~/css/responsive62a4.css?f=1621726526">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!--     Fonts and icons     -->
+        <link href="~/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+          @RenderSection("Styles", required: false)
+</head>
+<body class="landing-page" style="overflow-x: hidden !important;">
+     <header class="main_header_area">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="~/img/logos/Bitmoon-White.png" style="height: 50px !important;" alt=""><img src="~/img/logos/Bitmoon_Flavicon-1.png" style="height:50px !important" alt=""></a>
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item submenu dropdown active" style="color: #fe4f22;">
+                                <a class="nav-link dropdown-toggle" asp-controller="Home" asp-action="Index">Home</a>   
+                            </li>
+                            <li class="nav-item submenu dropdown ">
+                                <a class="nav-link dropdown-toggle" asp-controller="Home" asp-action="About_Us">About Us</a>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a class="nav-link dropdown-toggle" asp-controller="Home" asp-action="Plans">Plans</a>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a class="nav-link dropdown-toggle" asp-area="Identity" asp-page="/Account/Login">Investment</a>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a class="nav-link dropdown-toggle" asp-controller="Home" asp-action="Contact">Contacts</a>                               
+                            </li>
+                            
+                                <partial name="_LandingLoginPartial" />
+                        </ul>
+     
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+    @* <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bitmoonfasttrade</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> *@
+    <div class="container body-container">
+        <main role="main" class="pb-0">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer_area">
+            <div class="footer_widget">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <aside class="f_widget about_widget">
+                                <a href="#" class="f_logo">
+                                    <img img src="~/img/logos/Bitmoon-White.png" style="height: 50px !important;" alt="">
+                                </a>
+                                <div class="widget_inner row m0">
+                                    <h3 class="mb_0">Quick Contact</h3><br><br>
+                                    @* <ul class="list_style"> *@
+                                        
+                                        <h5 style="font-size: 1rem !important;"> 65, Street, London, MAC 5245.</h5>
+                                        <h5 style="font-size: 1rem !important;"> info@Bitmoonfasttrade.</h5><br>
+                                    @* <li></li>
+                                    <li><a href="cdn-cgi/l/email-protection.html#345d5a525b745755445d405558575546505b5a5157464d44405b1a575b59" class="email"><span class="__cf_email__" data-cfemail="543d3a323b143735243d203538373526303b3a3137262d24203b7a373b39">info@Bitmoonfasttrade</span></a></li>
+                                    <!--li><a href="https://t.me/joinchat/AAAAAEtJSyy0o4asGKZn7g">Join Telegram Group</a></li--> *@
+                                </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <aside class="f_widget link_widget">
+                                <div class="f_title">
+                                    Quick Link
+                                </div>
+                                <ul class="list_style">
+                                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li><a asp-controller="Home" asp-action="About_Us">About Us</a></li>
+                                    <li><a asp-controller="Home" asp-action="Plans">Packages</a></li>
+                                    <li><a asp-controller="Home" asp-action="FAQ">FAQ</a></li>
+                                    <li><a asp-controller="Home" asp-action="Contact">Contacts</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                        @* <div class="col-lg-3 col-sm-6">
+                            <aside class="f_widget link_widget">
+                                <div class="f_title">
+                                    Office Locations
+                                </div>
+                                <ul class="list_style">
+                                    
+                                    <li><a asp-controller="Home" asp-action="#">United State</a></li>
+                                    <li><a asp-controller="Home" asp-action="#">United Kingdom</a></li>
+                                    <li><a asp-controller="Home" asp-action="#">Singapore</a></li>
+                                    <li><a asp-controller="Home" asp-action="#">Canada</a></li>
+                                    <li><a asp-controller="Home" asp-action="#">Kuwait</a></li>
+                                </ul>
+                            </aside>
+                        </div> *@
+                        <div class="col-lg-4 col-sm-6">
+                            <aside class="f_widget news_widget">
+                                <div class="f_title">
+                                    Newsletter
+                                </div>
+                                <h5 class="mb_0">Get latest updates and offers.</h5>
+                                <form class="mailchimp" method="post">
+                                    <div class="input-group subscrib_form">
+                                        <input type="email" name="EMAIL" class="form-control memail" placeholder="Enter your email">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default submit_btn_b" type="submit"><i class="fa fa-paper-plane"></i></button>
+                                        </span>
+                                    </div>
+                                </form>
+                                @* <ul class="nav social_icon">
+                                    <li><a href="https://wa.me/+44 7951 223409"><i class="fa fa-whatsapp"></i></a></li>
+                                    <!--li><a href="https://t.me/joinchat/AAAAAEtJSyy0o4asGKZn7g"><i class="fa fa-paper-plane-o"></i></a></li-->
+                                </ul> *@
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright text-center"></div>
+                <div class="container">
+                    &copy; 2021 - Bitmoonfasttrade.  All right reserved. - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </div>
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="~/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="~/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/js/awesome-landing-page.js" type="text/javascript"></script>
+            <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/vendors/popper.js"></script>
+    <script src="~/vendors/jqery-nice-selector/js/jquery.nice-select.js"></script>
+    <script src="~/vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/vendors/particles/particles.js"></script>
+    <script src="~/vendors/particles/particles-custom.js"></script>
+    <script src="~/js/marquee.js"></script>
+    <script src="~/js/custom.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
